@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2020 at 10:57 AM
+-- Generation Time: May 27, 2020 at 11:11 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.3.15
+-- PHP Version: 7.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -38,8 +37,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category_name`) VALUES
-(1, 'Computer'),
-(2, 'Printer');
+(1, 'Desktop Computer'),
+(3, 'Laptop'),
+(4, 'Computer Hard Disk');
 
 -- --------------------------------------------------------
 
@@ -63,8 +63,8 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `item_name`, `item_code`, `item_price`, `item_image`, `item_description`, `item_remark`, `category_id`) VALUES
-(1, 'Dell Core i3', 'D001', 500000, 'dell.jpg', 'testing', '0', 1),
-(2, 'DEll Core i3', 'D001', 500000, 'dell.jpg', 'testing', 'testing', 1);
+(3, 'Dell Laptop', 'DL001', 600000, 'dell.jpg', 'Core i3\r\n4GB RAM\r\n1TB HDD', 'in stock', 3),
+(6, 'Seagate HDD', 'SHDD001', 80000, 'hd.jpg', 'SATA Disk', '3 Year Warranty', 4);
 
 --
 -- Indexes for dumped tables
@@ -91,13 +91,13 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
