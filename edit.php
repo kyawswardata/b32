@@ -35,7 +35,7 @@
         // exit();
 
         mysqli_query($con,$sqlUpdate);
-        header('location:index.php');
+        header('location:item.php');
 
     }
 ?>

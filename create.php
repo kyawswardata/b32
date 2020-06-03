@@ -7,12 +7,10 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-      //   var_dump($_FILES['item_image']);
-      // exit();
+
 
         $targetPath = "upload/".$_FILES["item_image"]["name"];
-      // echo $targetPath;
-      // exit();
+      
         move_uploaded_file($_FILES["item_image"]["tmp_name"],$targetPath);
         // exit();
         $item_name = $_POST['item_name'];
@@ -28,7 +26,7 @@
         // exit();
 
         mysqli_query($con,$sqlInsert);
-        header('location:index.php');
+        header('location:item.php');
 
     }
 
