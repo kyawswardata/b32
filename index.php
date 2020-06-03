@@ -36,7 +36,7 @@
                             <td><?php echo $row['item_description'];?></td>
                             <td><?php echo $row['category_name'];?></td>
                             <td>
-                                <a href="#" class="btn btn-primary">Edit</a>
+                                <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Edit</a>
                                 <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
