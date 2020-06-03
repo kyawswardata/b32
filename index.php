@@ -47,11 +47,12 @@ $result = mysqli_query($con,$sql);
         </div>
     </div>
 </section>
-<section>
+<section class="py-5">
     <div class="container">
         <div class="row">
-        <?php while($row = mysqli_fetch_assoc($result)){
-                    ?>
+        <?php 
+            while($row = mysqli_fetch_assoc($result)){                    
+        ?>
             <div class="col-md-3">
                 <div class="card text-left shadow-sm">
                   <img class="card-img-top" src="upload/<?php echo $row['item_image'];?>" alt="" style="width:100%;height:150px;">
@@ -64,9 +65,40 @@ $result = mysqli_query($con,$sql);
                 </div>
             </div>
             <?php
-            }
+                }
             ?>
         </div>
+    </div>
+</section>
+<section class="bg-light py-5">
+    <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7639.753956100826!2d96.15177144887834!3d16.782795104902895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ2JzU5LjEiTiA5NsKwMDknMTcuNyJF!5e0!3m2!1sen!2smm!4v1591175554875!5m2!1sen!2smm" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="col-md-6">
+                <h4 class="display-4">Contact Us</h4>
+                <form action="#">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text"
+                        class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Enter your name.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text"
+                        class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Enter your email.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Your Message</label>
+                      <textarea class="form-control" name="" id="" rows="3"></textarea>
+                    </div>
+                    <input type="submit" value="Send message" class="btn btn-primary w-100">
+                </form>
+            </div>
+         </div>
     </div>
 </section>
 <section class="bg-secondary py-4 text-white">
